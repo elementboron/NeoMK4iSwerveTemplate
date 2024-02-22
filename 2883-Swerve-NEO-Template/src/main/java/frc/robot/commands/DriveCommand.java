@@ -1,6 +1,5 @@
 package frc.robot.commands;
 
-import java.util.HashSet;
 import java.util.Set;
 
 import edu.wpi.first.math.filter.SlewRateLimiter;
@@ -101,7 +100,7 @@ public class DriveCommand extends Command {
         if (!xbox.getLeftBumper()) {
             speeds = ChassisSpeeds.fromFieldRelativeSpeeds(ySpeed, -xSpeed, -zSpeed,
                     new Rotation2d(
-                            -swerveSubsystem.getRotation2d().rotateBy(DriveConstants.NAVX_ANGLE_OFFSET).getRadians()));
+                            -swerveSubsystem.getRotation2d().rotateBy(DriveConstants.GYRO_ANGLE_OFFSET).getRadians()));
         } else {
             speeds = new ChassisSpeeds(xSpeed, ySpeed, -zSpeed);
         }

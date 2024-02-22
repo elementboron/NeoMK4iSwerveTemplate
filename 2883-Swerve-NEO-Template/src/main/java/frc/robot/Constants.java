@@ -50,48 +50,48 @@ public final class Constants {
     public static final double MODULE_KD = 0.0066806;// 0.0057682; //0.0076954;
 
     // --------- Front Left Module --------- \\
-    public static final int FL_DRIVE_ID = 2;
-    public static final int FL_STEER_ID = 1;
+    public static final int FL_DRIVE_ID = 6;
+    public static final int FL_STEER_ID = 5;
     public static final int FL_ABSOLUTE_ENCODER_PORT = 1;
-    public static final double FL_OFFSET_RADIANS = Units.rotationsToRadians(0.074951) + Math.PI * 0.5;
+    public static final double FL_OFFSET_RADIANS = Units.rotationsToRadians(0) + Math.PI * 0.5;
     public static final boolean FL_ABSOLUTE_ENCODER_REVERSED = true;
     public static final boolean FL_MOTOR_REVERSED = false;
 
     // --------- Front Right Module --------- \\
-    public static final int FR_DRIVE_ID = 4;
-    public static final int FR_STEER_ID = 3;
+    public static final int FR_DRIVE_ID = 8;
+    public static final int FR_STEER_ID = 7;
     public static final int FR_ABSOLUTE_ENCODER_PORT = 4;
-    public static final double FR_OFFSET_RADIANS = Units.rotationsToRadians(-0.062256) + Math.PI * 0.5;
+    public static final double FR_OFFSET_RADIANS = Units.rotationsToRadians(-0) + Math.PI * 0.5;
     public static final boolean FR_ABSOLUTE_ENCODER_REVERSED = true;
     public static final boolean FR_MOTOR_REVERSED = false;
 
     // --------- Back Right Module --------- \\
-    public static final int BR_DRIVE_ID = 6;
-    public static final int BR_STEER_ID = 5;
+    public static final int BR_DRIVE_ID = 2;
+    public static final int BR_STEER_ID = 1;
     public static final int BR_ABSOLUTE_ENCODER_PORT = 2;
-    public static final double BR_OFFSET_RADIANS = Units.rotationsToRadians(0.152100) + Math.PI * 0.5;
+    public static final double BR_OFFSET_RADIANS = Units.rotationsToRadians(0) + Math.PI * 0.5;
     public static final boolean BR_ABSOLUTE_ENCODER_REVERSED = true;
     public static final boolean BR_MOTOR_REVERSED = false;
 
     // --------- Back Left Module --------- \\
-    public static final int BL_DRIVE_ID = 8;
-    public static final int BL_STEER_ID = 7;
+    public static final int BL_DRIVE_ID = 4;
+    public static final int BL_STEER_ID = 3;
     public static final int BL_ABSOLUTE_ENCODER_PORT = 3;
-    public static final double BL_OFFSET_RADIANS = Units.rotationsToRadians(-0.109131) + Math.PI * 0.5;
+    public static final double BL_OFFSET_RADIANS = Units.rotationsToRadians(-0) + Math.PI * 0.5;
     public static final boolean BL_ABSOLUTE_ENCODER_REVERSED = true;
     public static final boolean BL_MOTOR_REVERSED = false;
 
   }
 
   public static class DriveConstants {
-    public static final double MAX_MODULE_VELOCITY = 4.8;
-    public static final double MAX_ROBOT_VELOCITY = 4.8;
-    public static final double MAX_ROBOT_RAD_VELOCITY = 12.0; // Approx. Measured rads/sec
+    public static final double MAX_MODULE_VELOCITY = 3;
+    public static final double MAX_ROBOT_VELOCITY = 3;
+    public static final double MAX_ROBOT_RAD_VELOCITY = 10; // Approx. Measured rads/sec
 
     // TODO: Change based on actual robot!
-    public static final double TRACK_WIDTH = Units.inchesToMeters(18.75);
-    public static final double WHEEL_BASE = Units.inchesToMeters(18.75);
-    public static final Rotation2d NAVX_ANGLE_OFFSET = Rotation2d.fromDegrees(0);
+    public static final double TRACK_WIDTH = Units.inchesToMeters(23.75);
+    public static final double WHEEL_BASE = Units.inchesToMeters(29.5);
+    public static final Rotation2d GYRO_ANGLE_OFFSET = Rotation2d.fromDegrees(0);
 
     public static final class ModuleIndices {
       public static final int FRONT_LEFT = 0;
@@ -110,23 +110,5 @@ public final class Constants {
     public static final double Z_SPEED_LIMIT = 1.0;
   }
 
-  public static class CommonConstants {
-    public static final boolean LOG_INTO_FILE_ENABLED = false;
-  }
 
-  public static class VisionContsants {
-
-    public static final double THETA_kP = .9;
-    public static final double THETA_kI = 0.0;
-    public static final double THETA_kD = 0.08;
-
-    public static final double X_kP = 1.0;
-    public static final double X_kI = 0.0;
-    public static final double X_kD = 0.02;
-
-    public static final double Y_kP = 1.5;
-    public static final double Y_kI = 0.0;
-    public static final double Y_kD = 0.02;
-
-  }
 }
